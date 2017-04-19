@@ -1,8 +1,5 @@
 Dir.glob('lib/tasks/*.rake').each { |r| load r}
 
-require 'rubygems'
-require 'bundler/setup'
-
 require 'irb'
 require 'rake'
 
@@ -17,6 +14,7 @@ task :environment do
 end
 
 task :irb_start => [:environment] do
+  # rake irb_start if you want to be able to work with you project in console in rails c way
   ARGV.clear
   IRB.start
 end
